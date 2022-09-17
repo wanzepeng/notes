@@ -1,2 +1,4 @@
 # notes
-技术笔记
+## Java
+
+### [JVM虚拟机](/Java/JVM笔记)
