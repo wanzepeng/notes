@@ -27,3 +27,7 @@
 ## [垃圾回收概述](Java/JVM笔记/垃圾回收概述/README.md)
 
 ## [垃圾回收相关算法](Java/JVM笔记/垃圾回收相关算法/README.md)
+
+## [垃圾回收相关概念](Java/JVM笔记/垃圾回收相关概念/README.md)
+
+## [垃圾回收器](Java/JVM笔记/垃圾回收器/README.md)
