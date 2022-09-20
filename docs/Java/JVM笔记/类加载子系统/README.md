@@ -34,11 +34,6 @@ ClassLoader只负责class文件的加载，至于它是否可以运行，则由E
 例如下面的一段简单的代码
 
 ```java
-/**
- * 类加载子系统
- * @author: 陌溪
- * @create: 2020-07-05-8:24
- */
 public class HelloLoader {
     public static void main(String[] args) {
         System.out.println("我已经被加载啦");
@@ -190,10 +185,6 @@ return
 * 虚拟机必须保证一个类的<clinit>（）方法在多线程下被同步加锁。
 
 ```java
-/**
- * @author: 陌溪
- * @create: 2020-07-05-9:14
- */
 public class DeadThreadTest {
     public static void main(String[] args) {
         new Thread(() -> {
@@ -326,10 +317,6 @@ null
 刚刚我们通过概念了解到了，根加载器只能够加载 java /lib目录下的class，我们通过下面代码验证一下
 
 ```java
-/**
- * @author: 陌溪
- * @create: 2020-07-05-10:17
- */
 public class ClassLoaderTest1 {
     public static void main(String[] args) {
         System.out.println("*********启动类加载器************");

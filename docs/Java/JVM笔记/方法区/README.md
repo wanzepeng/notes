@@ -6,7 +6,7 @@
 
 ![image-20220725220716399](images/image-20220725220716399.png)
 
-<img src="images\image-20220725221551540.png" alt="image-20220725221551540" style="zoom:80%;" />
+![image-20220725221551540](images\image-20220725221551540.png)
 
 ## 方法区的理解
 
