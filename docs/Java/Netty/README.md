@@ -38,7 +38,7 @@ buffer则用来缓冲读写数据。
 
 **多线程版设计**
 
-![image-20220929013758211](D:\学习\notes\docs\Java\Netty\images\image-20220929013758211.png)
+![image-20220929013758211](images\image-20220929013758211.png)
 
 **缺点：**
 
@@ -48,7 +48,7 @@ buffer则用来缓冲读写数据。
 
 **线程池版设计**
 
-![image-20220929033822643](D:\学习\notes\docs\Java\Netty\images\image-20220929033822643.png)
+![image-20220929033822643](images\image-20220929033822643.png)
 
 **缺点：**
 
@@ -59,7 +59,7 @@ buffer则用来缓冲读写数据。
 
 selector的作用就是配合一个线程来管理多个channel，获取这些channel上发生的事件，这些channel工作在非阻塞模式下，不会让线程吊死在一个channel上。适合**连接数特别多，但流量低的场景**（low traffic）
 
-![image-20220929035517148](D:\学习\notes\docs\Java\Netty\images\image-20220929035517148.png)
+![image-20220929035517148](images\image-20220929035517148.png)
 
 调用select的select()会阻塞直到channel发生了读写就绪事件，这些事件发生，selector方法就会返回这些事件交给thread来处理。
 
@@ -116,27 +116,27 @@ try (FileChannel channel = new FileInputStream("netty/src/main/resources/data.tx
 
 一开始
 
-![image-20220929072004142](D:\学习\notes\docs\Java\Netty\images\image-20220929072004142.png)
+![image-20220929072004142](images\image-20220929072004142.png)
 
 写模式下，position是写入位置，limit等于容量，下图表示写入了四个字节后的状态
 
-![image-20220929072144287](D:\学习\notes\docs\Java\Netty\images\image-20220929072144287.png)
+![image-20220929072144287](images\image-20220929072144287.png)
 
 **flip**行为发生后，position切换为读取位置，limit切换为读取限制
 
-![image-20220929072350999](D:\学习\notes\docs\Java\Netty\images\image-20220929072350999.png)
+![image-20220929072350999](images\image-20220929072350999.png)
 
 读取四个字节后，状态为
 
-![image-20220929072902498](D:\学习\notes\docs\Java\Netty\images\image-20220929072902498.png)
+![image-20220929072902498](images\image-20220929072902498.png)
 
 **clear**行为发生后切换为写模式，状态为
 
-![image-20220929073015859](D:\学习\notes\docs\Java\Netty\images\image-20220929073015859.png)
+![image-20220929073015859](images\image-20220929073015859.png)
 
 **compact**方法，是把未读完的部分向前压缩，然后切换为写模式
 
-![image-20220929073253758](D:\学习\notes\docs\Java\Netty\images\image-20220929073253758.png)
+![image-20220929073253758](images\image-20220929073253758.png)
 
 #### ByteBuffer常见方法
 
